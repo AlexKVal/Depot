@@ -15,6 +15,11 @@ class ProductsControllerTest < ActionController::TestCase
     get :index
     assert_response :success
     assert_not_nil assigns(:products)
+    assert_select '.list_description', :minimum => 3
+    assert_select '#main .list_image', 3
+    assert_select 'dt', 'Programming Ruby 1.9'
+    assert_select '.list_line_odd', :minimum => 1
+    assert_select '.list_line_even', :minimum => 1
   end
 
   test "should get new" do
