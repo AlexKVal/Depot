@@ -36,7 +36,7 @@ class CartsController < ApplicationController
       format.xml  { render :xml => @cart }
     end
   end
-
+ 
   # GET /carts/1/edit
   def edit
     @cart = Cart.find(params[:id])
@@ -77,11 +77,13 @@ class CartsController < ApplicationController
   # DELETE /carts/1
   # DELETE /carts/1.xml
   def destroy
-    @cart = Cart.find(params[:id])
-    @cart.destroy
+  	@cart = current_cart
+  	@cart.destroy
+  	session[:cart_id] = nil
 
     respond_to do |format|
-      format.html { redirect_to(carts_url) }
+      format.html { redirect_to(store_url,
+        :notice=>'Ur cart is currently empty') }
       format.xml  { head :ok }
     end
   end
