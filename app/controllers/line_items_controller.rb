@@ -50,8 +50,8 @@ class LineItemsController < ApplicationController
     	
     respond_to do |format|
       if @line_item.save
-        format.html { redirect_to(store_url)} #@line_item.cart) }
-        format.js
+        format.html { redirect_to(store_url) } #@line_item.cart) }
+        format.js   { @current_item = @line_item }
         format.xml  { render :xml => @line_item, :status => :created, :location => @line_item }
       else
         format.html { render :action => "new" }
