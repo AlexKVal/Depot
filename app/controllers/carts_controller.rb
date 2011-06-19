@@ -80,9 +80,10 @@ class CartsController < ApplicationController
   	@cart = current_cart
   	@cart.destroy
   	session[:cart_id] = nil
-
+	
     respond_to do |format|
       format.html { redirect_to(store_url) }
+      format.js
       format.xml  { head :ok }
     end
   end

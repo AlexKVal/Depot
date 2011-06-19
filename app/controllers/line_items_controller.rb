@@ -81,9 +81,11 @@ class LineItemsController < ApplicationController
   def destroy
     @line_item = LineItem.find(params[:id])
     @line_item.destroy
-
+	@cart = current_cart
+	
     respond_to do |format|
       format.html { redirect_to(store_url)} #current_cart) }
+      format.js
       format.xml  { head :ok }
     end
   end
