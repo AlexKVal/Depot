@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: Dave Thomas
+  address: MyText
+  email: dave@Example.Org
+  pay_type: Check
+
+two:
+  name: Батько Махно
+  address: Украино
+  email: mahno@gmail.com
+  pay_type: Грывни
