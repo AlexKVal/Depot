@@ -1,8 +1,5 @@
 .bundle
-<<<<<<< HEAD
 .rvmrc
-=======
->>>>>>> 081e0ebccb01bb56a71948971cd947fb8b1c6e83
 db/*.sqlite3
 log/*.log
 tmp/

@@ -3,17 +3,10 @@ require 'test_helper'
 class UsersControllerTest < ActionController::TestCase
   setup do
     @input_attributes = {
-<<<<<<< HEAD
       :name => "sam",
       :password => "private",
       :password_confirmation => "private"
     }
-=======
-	:name => "sam",
-	:password => "private",
-	:password_confirmation => "private"
-}
->>>>>>> 081e0ebccb01bb56a71948971cd947fb8b1c6e83
   end
 
   test "should get index" do
@@ -35,8 +28,6 @@ class UsersControllerTest < ActionController::TestCase
     assert_redirected_to users_path
   end
 
-<<<<<<< HEAD
-=======
   test "should show user" do
     get :show, :id => @user.to_param
     assert_response :success
@@ -59,5 +50,4 @@ class UsersControllerTest < ActionController::TestCase
 
     assert_redirected_to users_path
   end
->>>>>>> 081e0ebccb01bb56a71948971cd947fb8b1c6e83
 end
