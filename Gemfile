@@ -1,6 +1,10 @@
 source 'http://rubygems.org'
 
+<<<<<<< HEAD
 gem 'rails', '3.0.9'
+=======
+gem 'rails', '3.0.7'
+>>>>>>> 081e0ebccb01bb56a71948971cd947fb8b1c6e83
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -27,6 +31,7 @@ gem 'will_paginate', '>= 3.0.pre'
 # Bundle gems for the local environment. Make sure to
 # put test-only gems in this group so their generators
 # and rake tasks are available in development mode:
+<<<<<<< HEAD
 group :development, :test do
   # gem 'webrat'
   gem "awesome_print"
@@ -34,3 +39,8 @@ group :development, :test do
   gem "looksee"
 end
 
+=======
+# group :development, :test do
+#   gem 'webrat'
+# end
+>>>>>>> 081e0ebccb01bb56a71948971cd947fb8b1c6e83

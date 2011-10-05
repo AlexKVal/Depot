@@ -3,10 +3,17 @@ require 'test_helper'
 class UsersControllerTest < ActionController::TestCase
   setup do
     @input_attributes = {
+<<<<<<< HEAD
       :name => "sam",
       :password => "private",
       :password_confirmation => "private"
     }
+=======
+	:name => "sam",
+	:password => "private",
+	:password_confirmation => "private"
+}
+>>>>>>> 081e0ebccb01bb56a71948971cd947fb8b1c6e83
   end
 
   test "should get index" do
@@ -28,4 +35,29 @@ class UsersControllerTest < ActionController::TestCase
     assert_redirected_to users_path
   end
 
+<<<<<<< HEAD
+=======
+  test "should show user" do
+    get :show, :id => @user.to_param
+    assert_response :success
+  end
+
+  test "should get edit" do
+    get :edit, :id => @user.to_param
+    assert_response :success
+  end
+
+  test "should update user" do
+    put :update, :id => @user.to_param, :user => @input_attributes
+    assert_redirected_to users_path
+  end
+
+  test "should destroy user" do
+    assert_difference('User.count', -1) do
+      delete :destroy, :id => @user.to_param
+    end
+
+    assert_redirected_to users_path
+  end
+>>>>>>> 081e0ebccb01bb56a71948971cd947fb8b1c6e83
 end
