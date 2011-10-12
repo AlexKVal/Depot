@@ -1,6 +1,6 @@
 class MissmethController < ApplicationController
   skip_before_filter :authorize
-  
+s
   if ::Rails.env == "development"
     def method_missing(name, *args)
       render(:inline => %{

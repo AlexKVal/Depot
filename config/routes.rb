@@ -16,6 +16,6 @@ Depot::Application.routes.draw do
     end
     root :to => 'store#index', :as => 'store'
   end
-  
+
   match 'miss/:action' => 'missmeth'
 end
