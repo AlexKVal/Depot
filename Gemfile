@@ -32,6 +32,7 @@ group :development, :test do
   gem "awesome_print"
   gem "wirble"
   gem "looksee"
+#  gem "rspec-rails"
 end
 
 # group :development, :test do

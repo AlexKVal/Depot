@@ -3,3 +3,8 @@
 db/*.sqlite3
 log/*.log
 tmp/
+vendor/cache/
+vendor/cache/*
+vendor/bundle/
+vendor/bundle/*
+
