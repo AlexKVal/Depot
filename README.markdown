@@ -1,5 +1,3 @@
-# Учебный проект
+# Just for educational purpose
 
-**Это первое приложение для тренировки.**
-
-Типа инет-магазин.
+** The Depot project.**

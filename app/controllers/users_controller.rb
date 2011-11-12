@@ -74,12 +74,12 @@ class UsersController < ApplicationController
   def destroy
     @user = User.find(params[:id])
     begin
-    	@user.destroy
-    	flash[:notice] = "User #{@user.name} deleted"
+      @user.destroy
+      flash[:notice] = "User #{@user.name} deleted"
     rescue Exception => e
-    	flash[:notice] = e.message
+      flash[:notice] = e.message
     end
-    
+
     respond_to do |format|
       format.html { redirect_to(users_url) }
       format.xml  { head :ok }

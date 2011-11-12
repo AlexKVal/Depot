@@ -26,12 +26,12 @@ class OrdersController < ApplicationController
   # GET /orders/new
   # GET /orders/new.xml
   def new
-  	@cart = current_cart
-  	if @cart.line_items.empty?
-  		redirect_to store_url, :notice=>"Your cart is empty"
-  		return
-  	end
-  	
+    @cart = current_cart
+    if @cart.line_items.empty?
+      redirect_to store_url, :notice=>"Your cart is empty"
+      return
+    end
+
     @order = Order.new
 
     respond_to do |format|
@@ -53,9 +53,9 @@ class OrdersController < ApplicationController
 
     respond_to do |format|
       if @order.save
-      	Cart.destroy(session[:cart_id])
-      	session[:cart_id] = nil
-      	Notifier.order_received(@order).deliver
+        Cart.destroy(session[:cart_id])
+        session[:cart_id] = nil
+        Notifier.order_received(@order).deliver
         format.html { redirect_to(store_url, :notice => I18n.t('.thanks')) }
         format.xml  { render :xml => @order, :status => :created, :location => @order }
       else

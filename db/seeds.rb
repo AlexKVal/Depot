@@ -19,7 +19,7 @@ Product.create(:title => 'Web Design for Developers',
         and work through a web site redesign, taking a new design from concept
         all the way to implementation.
       </p>},
-  :image_url =>   '/images/wd4d.jpg',    
+  :image_url =>   '/images/wd4d.jpg',
   :price => 42.95)
 # . . .
 Product.create(:title => 'Programming Ruby 1.9',
@@ -34,7 +34,7 @@ Product.create(:title => 'Programming Ruby 1.9',
 # . . .
 
 Product.create(:title => 'Rails Test Prescriptions',
-  :description => 
+  :description =>
     %{<p>
         <em>Rails Test Prescriptions</em> is a comprehensive guide to testing
         Rails applications, covering Test-Driven Development from both a
@@ -48,7 +48,7 @@ Product.create(:title => 'Rails Test Prescriptions',
 # . . .
 
 Product.create(:title => 'А ну ка русская фишка',
-  :description => 
+  :description =>
     %{<p>
         <em>Это проверка русского языка</em> на нескольких строках пусть 
         это будет три строки нет четыре нет множество )) даже больше 

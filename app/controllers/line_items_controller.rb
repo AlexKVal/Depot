@@ -41,14 +41,14 @@ class LineItemsController < ApplicationController
   # POST /line_items
   # POST /line_items.xml
   def create
-  	@cart = current_cart
-  	product = Product.find(params[:product_id])
+    @cart = current_cart
+    product = Product.find(params[:product_id])
     @line_item = @cart.add_product(product.id)
-    
+
     if !session[:access_counter].nil?
-    	session[:access_counter] = 0
+      session[:access_counter] = 0
     end
-    	
+
     respond_to do |format|
       if @line_item.save
         format.html { redirect_to(store_url) } #@line_item.cart) }
@@ -82,8 +82,8 @@ class LineItemsController < ApplicationController
   def destroy
     @line_item = LineItem.find(params[:id])
     @line_item.destroy
-	@cart = current_cart
-	
+    @cart = current_cart
+
     respond_to do |format|
       format.html { redirect_to(store_url)} #current_cart) }
       format.js
